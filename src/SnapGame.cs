@@ -14,6 +14,8 @@ namespace CardGames
 			SwinGame.LoadSoundEffectNamed ("Sound0", "slap0.wav");
 			SwinGame.LoadSoundEffectNamed ("Sound1", "slap1.wav");
 			SwinGame.LoadSoundEffectNamed ("Sound2", "slap2.wav");
+			SwinGame.LoadFontNamed ("GameFont", "Chunkfive.otf", 24);
+
         }
 
 		/// <summary>
@@ -65,7 +67,7 @@ namespace CardGames
 			}
 			else
 			{
-				SwinGame.DrawText ("No card played yet...", Color.RoyalBlue, 0, 20);
+				SwinGame.DrawText ("No card played yet..."+myGame.Score(0), Color.White,"GameFont", 0, 30);
 			}
 
 			// Draw the back of the cards... to represent the deck
